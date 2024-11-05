@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <button onclick="generatePassword()">Record Audio and Generate Password</button>
+    <div id="result"></div>
+
+    <script>
+        async function generatePassword() {
+            const response = await fetch('/generate_password', {
+                method: 'POST',
+            });
+            const result = await response.json();
+            document.getElementById('result').innerText = result.status === 'success' ? `Generated Password: ${result.password}` : `Error: ${result.message}`;
+        }
+    </script>
+</body>
+</html>

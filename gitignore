@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Flask and Python debug log
+*.log
+
+# SQLite database
+passwords.db
+
+# Environment variables
+.env
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# Audio files
+*.wav
+
+# Ignore IDE/editor specific settings
+.vscode/
+.idea/
